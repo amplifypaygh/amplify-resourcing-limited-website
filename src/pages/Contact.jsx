@@ -18,7 +18,7 @@ import { motion } from 'framer-motion';
 import { services as serviceCatalog, ContactHero } from '@/lib/content';
 import HeroSection from '@/components/others/HeroSection';
 import { emailTemplates } from "@/lib/emailTemplates";
-import { LinkedinIcon, WhatsAppIcon, FacebookIcon, InstagramIcon } from '@/components/socialMediaIcons';
+import { LinkedinIcon, WhatsAppIcon, FacebookIcon, InstagramIcon } from '@/components/SocialMediaIcons';
 
 
 const MotionDiv = motion.div;
