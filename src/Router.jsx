@@ -4,11 +4,13 @@ import Pages from "./pages";
 
 import ScrollToTop from "./components/ScrollToTop";
 import Loader from "./components/Loader";
+import SeoManager from "./components/SeoManager";
 
 export default function Router() {
   return (
     <Suspense fallback={<Loader />}>
         <ScrollToTop />
+        <SeoManager />
         <Routes>
             <Route path="/" element={<Pages.Home />} />
             <Route path="/about" element={<Pages.About />} />
