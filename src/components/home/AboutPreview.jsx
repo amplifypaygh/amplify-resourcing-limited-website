@@ -3,14 +3,15 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Check, ArrowRight, Target, Lightbulb, Users } from 'lucide-react';
 import { motion } from 'framer-motion';
+import GroupOfMenStanding from '@/assets/group-of-people-standing.jpg'
 
 const MotionDiv = motion.div;
 
 const highlights = [
-  'Tailored HR strategies for your unique needs',
-  'Technology-driven solutions for efficiency',
-  'Experienced team across diverse industries',
-  'End-to-end support from planning to execution',
+  'Thought leadership for complex organizations',
+  'HR advisory that supports measurable impact',
+  'Strategic guidance for growth and transformation',
+  'Trusted partnership across sectors and contexts',
 ];
 
 export default function AboutPreview() {
@@ -30,7 +31,7 @@ export default function AboutPreview() {
               {/* Main Image */}
               <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=80"
+                  src={GroupOfMenStanding}
                   alt="Team discussion"
                   className="w-full h-125 object-cover"
                 />
@@ -46,8 +47,8 @@ export default function AboutPreview() {
                     <Users className="w-7 h-7 text-white" />
                   </div>
                   <div>
-                    <div className="text-3xl font-bold text-gray-900">10+</div>
-                    <div className="text-gray-500">Years Experience</div>
+                      <div className="text-3xl font-bold text-gray-900">Trusted</div>
+                      <div className="text-gray-500">Strategic Partner</div>
                   </div>
                 </div>
               </div>
@@ -59,8 +60,8 @@ export default function AboutPreview() {
                     <Target className="w-5 h-5" />
                   </div>
                   <div>
-                    <div className="text-lg font-bold">Mission Driven</div>
-                    <div className="text-secondary/90 text-sm">People First</div>
+                    <div className="text-lg font-bold">Thought Leadership</div>
+                    <div className="text-secondary/90 text-sm">HR Advisory</div>
                   </div>
                 </div>
               </div>
@@ -80,16 +81,16 @@ export default function AboutPreview() {
             </div>
 
             <h2 className="text-2xl lg:text-4xl font-bold text-gray-900 mb-4 leading-tight">
-              Discover the Mission Behind
-              <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-primary-dark"> Amplify Resourcing</span>
+              Your Partner for Business Growth &
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-primary-dark"> Transformation</span>
             </h2>
 
             <p className=" text-gray-600 leading-relaxed mb-4">
-              At Amplify Resourcing Limited, we provide expert advice and comprehensive business support services, integrating both human resource solutions and technology-driven innovations to help organizations thrive.
+              Amplify Resourcing Limited is a thought leadership management consulting and HR advisory services company that supports large corporations, governments, and international organizations.
             </p>
 
             <p className=" text-gray-500 leading-relaxed mb-6">
-              We specialize in HR consulting, business optimization, technology solutions, and automation, ensuring that businesses have the right tools and workforce to achieve sustainable growth.
+              We help organizations capture value through strategic insight, tailored advisory support, and people-centered solutions that strengthen growth and performance.
             </p>
 
             {/* Highlights */}

@@ -33,17 +33,17 @@ export const insightCTA = {
 }
 
 export const AboutHero = {
-    title: "Discover the Mission Behind",
-    subtitle: "About Us",
-    description: "Empowering organizations through people, process, and innovation since day one.",
-    highlightedText:"Amplify Resourcing"
+  title: "Your Partner for Business Growth &",
+  subtitle: "Amplify Resourcing Limited",
+  description: "Thought leadership and HR advisory for organizations that need clarity, structure, and measurable impact.",
+  highlightedText:"Transformation"
 }
 
 export const serviceHero = {
     title: "Empowering Businesses with",
     subtitle: "Our Services",
-    description: "Discover our integrated services designed to support and scale your business efficiently.",
-    highlightedText:" Smart Solutions"
+  description: "Discover our consulting, advisory, and support services designed to strengthen visibility, operations, and growth.",
+  highlightedText:" Strategic Solutions"
 }
 
 export const ContactHero = {
@@ -119,65 +119,65 @@ export const insightPosts = [
 export const values = [
   {
     icon: Lightbulb,
-    title: 'Innovation',
-    description: 'We embrace technology and creativity to provide forward-thinking solutions that keep you ahead.',
+    title: 'Insight',
+    description: 'We bring clear thinking and informed perspective to complex business and people challenges.',
   },
   {
     icon: Award,
     title: 'Expertise',
-    description: 'Our team consists of skilled professionals with in-depth knowledge across various industries.',
+    description: 'We combine management consulting discipline with deep HR advisory experience.',
   },
   {
     icon: Rocket,
-    title: 'Cost-effectiveness',
-    description: 'We offer tailored services that help businesses optimize resources and reduce overhead costs.',
+    title: 'Impact',
+    description: 'Our work is designed to create practical improvements you can measure and sustain.',
   },
   {
     icon: Users,
-    title: 'Flexibility',
-    description: 'Our solutions are scalable, allowing organizations to adjust services as their needs evolve.',
+    title: 'Partnership',
+    description: 'We work alongside clients as a trusted partner, not just a service provider.',
   },
   {
     icon: Shield,
-    title: 'Compliance',
-    description: 'We ensure that businesses adhere to all relevant industry regulations and best practices.',
+    title: 'Integrity',
+    description: 'We deliver advice that is responsible, principled, and aligned with best practice.',
   },
   {
     icon: Heart,
-    title: 'People-First',
-    description: 'At our core, we believe in putting people first in every strategy and solution we develop.',
+    title: 'Transformation',
+    description: 'We focus on helping organizations evolve in ways that strengthen both performance and culture.',
   },
 ];
 
 export const approach = [
   {
     step: '01',
-    title: 'Assess',
-    description: 'We begin by evaluating your business needs across HR, operations, and technology to uncover growth opportunities and performance gaps.',
+    title: 'Understand',
+    description: 'We start by listening carefully and studying the context, priorities, and challenges shaping your organization.',
   },
   {
     step: '02',
-    title: 'Implement',
-    description: 'Our team develops and deploys tailored solutions — from HR strategies to digital tools and automated processes — aligned with your business goals.',
+    title: 'Advise',
+    description: 'We develop strategic recommendations and practical pathways grounded in thought leadership and HR expertise.',
   },
   {
     step: '03',
-    title: 'Evaluate',
-    description: 'We monitor outcomes, measure impact, and refine strategies to ensure long-term efficiency, productivity, and growth.',
+    title: 'Deliver',
+    description: 'We support implementation and refinement so the work translates into meaningful, lasting outcomes.',
   },
 ];
 
 export const services = [
   {
     icon: Users,
-    title: 'HR Advisory',
-    description: 'Strategic HR guidance to build strong organizational foundations and optimize your people processes.',
+    title: 'Thought Leadership Strategy',
+    description: 'We align your company with market opportunities through pre-screened expertise and thought leadership engagement support.',
     features: [
-      'HR strategy development and alignment',
-      'Organizational structure design',
-      'HR process optimization',
-      'Change management support',
-      'HR audit and assessment',
+      'Thought leadership engagement design',
+      'Market-aligned strategy support',
+      'Expertise sourcing and positioning',
+      'Solution-led company visibility',
+      'Full consulting and management support',
     ],
     color: 'from-purple-500 to-purple-600',
     bgColor: 'bg-purple-50',
@@ -185,14 +185,14 @@ export const services = [
   },
   {
     icon: UserSearch,
-    title: 'Talent Acquisition',
-    description: 'Find and attract the right talent with our comprehensive recruitment and selection strategies.',
+    title: 'Executive Positioning & Branding',
+    description: 'We build the public voices of senior leaders through speeches, articles, interviews, and media presence.',
     features: [
-      'End-to-end recruitment services',
-      'Executive search and headhunting',
-      'Candidate screening and assessment',
-      'Employer branding strategy',
-      'Onboarding program design',
+      'Executive voice development',
+      'Speech and article support',
+      'Media and interview positioning',
+      'Authority and influence building',
+      'Brand presence alignment',
     ],
     color: 'from-blue-500 to-blue-600',
     bgColor: 'bg-blue-50',
@@ -200,14 +200,14 @@ export const services = [
   },
   {
     icon: Shield,
-    title: 'Compliance & Policy',
-    description: 'Ensure your organization meets all regulatory requirements with robust policies and procedures.',
+    title: 'Integration with Business Goals',
+    description: 'We connect thought leadership directly to commercial goals such as market lead generation and policy influence.',
     features: [
-      'Employment law compliance',
-      'HR policy development',
-      'Employee handbook creation',
-      'Workplace investigation support',
-      'Regulatory audit preparation',
+      'Commercial alignment',
+      'Lead generation support',
+      'Policy influence strategy',
+      'Stakeholder messaging',
+      'Business goal integration',
     ],
     color: 'from-emerald-500 to-emerald-600',
     bgColor: 'bg-emerald-50',
@@ -215,14 +215,14 @@ export const services = [
   },
   {
     icon: GraduationCap,
-    title: 'Training & Development',
-    description: 'Upskill your workforce with tailored training programs that drive performance and growth.',
+    title: 'HR Advisory Service',
+    description: 'We provide strategic and operational guidance to help organizations build, manage, and optimize their workforce.',
     features: [
-      'Leadership development programs',
-      'Skills gap analysis',
-      'Custom training design',
-      'E-learning solutions',
-      'Performance coaching',
+      'Workforce planning support',
+      'Operational HR guidance',
+      'Organization design advice',
+      'People management optimization',
+      'Strategic HR support',
     ],
     color: 'from-orange-500 to-orange-600',
     bgColor: 'bg-orange-50',
@@ -230,14 +230,14 @@ export const services = [
   },
   {
     icon: Heart,
-    title: 'Culture & Retention',
-    description: 'Build a thriving workplace culture that attracts, engages, and retains top talent.',
+    title: 'Comprehensive Training Programs',
+    description: 'We provide your team with practical information and applicable skills through training resources and development programs.',
     features: [
-      'Employee engagement surveys',
-      'Culture assessment and design',
-      'Retention strategy development',
-      'Recognition program design',
-      'Wellness program implementation',
+      'Practical training resources',
+      'Skills development programs',
+      'Team capability building',
+      'Applied learning support',
+      'Development planning',
     ],
     color: 'from-pink-500 to-pink-600',
     bgColor: 'bg-pink-50',

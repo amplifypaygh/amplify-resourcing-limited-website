@@ -195,7 +195,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900">Location</h3>
-                    <p className="text-gray-600">29 Sam Nujoma Street, North Ridge, Accra</p>
+                    <p className="text-gray-600">No. 9 Nii Sai Road, East Legon, Accra</p>
                   </div>
                 </div>
 
@@ -215,10 +215,10 @@ export default function Contact() {
                 <h3 className="font-semibold text-gray-900 mb-4">Follow Us</h3>
                 <div className="flex gap-3">
                   {[
-                    { name: 'LinkedIn', icon: LinkedinIcon, href: '#', color: 'hover:bg-blue-600' },
+                    { name: 'LinkedIn', icon: LinkedinIcon, href: 'https://www.linkedin.com/company/amplify-resourcing-limited', color: 'hover:bg-blue-600' },
                     { name: 'WhatsApp', icon: WhatsAppIcon, href: 'https://wa.me/233556047336', color: 'hover:bg-green-600' },
-                    { name: 'Facebook', icon: FacebookIcon, href: '#', color: 'hover:bg-blue-700' },
-                    { name: 'Instagram', icon: InstagramIcon, href: '#', color: 'hover:bg-pink-600' },
+                    { name: 'Facebook', icon: FacebookIcon, href: 'https://www.facebook.com/amplifyresourcing', color: 'hover:bg-blue-700' },
+                    { name: 'Instagram', icon: InstagramIcon, href: 'https://www.instagram.com/amplifyresourcing', color: 'hover:bg-pink-600' },
                   ].map((social, idx) => {
                     const IconComponent = social.icon;
                     return (

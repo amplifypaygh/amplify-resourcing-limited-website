@@ -1,16 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { 
-  Users, 
-  UserSearch, 
-  Shield, 
-  GraduationCap, 
-  Heart, 
-  ArrowRight,
-  Check,
-  Sparkles,
-  Briefcase
-} from 'lucide-react';
+import { ArrowRight, Check, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
 import HeroSection from '@/components/others/HeroSection';
 import CTASection from '@/components/others/CTASection';

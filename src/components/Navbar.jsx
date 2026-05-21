@@ -33,9 +33,14 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* Logo */}
+          {/* Logo */}  
           <Link to="/" className="flex items-center gap-3">
-              <img src="amplify-logo-bg.jpg" alt="Amplify Resourcing Limited" className="h-12" />
+            {isScrolled ? (
+              <img src="amplify-transparent.png" alt="Amplify Resourcing Limited" className="h-14" />
+            ) : (
+              <img src="amplify-light.png" alt="Amplify Resourcing Limited" className="h-14" />
+            )}
+  
           </Link>
 
           {/* Desktop Navigation */}
@@ -44,10 +49,10 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 to={link.path}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:bg-purple-500/10 ${
+                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                   isScrolled
-                    ? 'text-gray-700 hover:text-purple-700'
-                    : 'text-white/90 hover:text-white'
+                    ? 'text-gray-700 hover:text-purple-700 hover:bg-purple-500/10'
+                    : 'text-white/90 hover:text-white hover:bg-purple-500'
                 }`}
               >
                 {link.name}

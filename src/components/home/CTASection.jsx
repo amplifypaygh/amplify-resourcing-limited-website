@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, MessageCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
+import ctaImage from '@/assets/ready-to-work-with-us.jpg';
 
 const MotionDiv = motion.div;
 
@@ -47,7 +48,7 @@ export default function CTASection() {
                       </Button>
                     </Link>
                     <a
-                      href="https://wa.me/233000000000"
+                      href="https://wa.me/233556047336"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -66,7 +67,7 @@ export default function CTASection() {
                 {/* Image */}
                 <div className="hidden lg:block">
                   <img
-                    src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80"
+                    src={ctaImage}
                     alt="Team collaboration"
                     className="rounded-2xl shadow-2xl"
                   />

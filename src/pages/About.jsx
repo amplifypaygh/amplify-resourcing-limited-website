@@ -11,6 +11,7 @@ import { motion } from 'framer-motion';
 import CTASection from '@/components/others/CTASection';
 import HeroSection from '@/components/others/HeroSection';
 import { AboutCTA, AboutHero, values, approach } from '@/lib/content';
+import WhoWeAreImage from '@/assets/who-we-are.jpg';
 
 const MotionDiv = motion.div;
 
@@ -32,8 +33,8 @@ export default function About() {
             >
               <div className="relative">
                 <img
-                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80"
-                  alt="Team collaboration"
+                  src={WhoWeAreImage}
+                  alt="Someone showing something to a person on phone"
                   className="rounded-3xl shadow-2xl"
                 />
                 <div className="absolute -bottom-8 -right-8 w-full h-full bg-linear-to-br from-purple-100 to-purple-200 rounded-3xl -z-10"></div>
@@ -50,10 +51,10 @@ export default function About() {
                 Who We Are
               </h2>
               <p className=" text-gray-600 leading-relaxed mb-6">
-                At Amplify Resourcing Limited, we provide expert advice and comprehensive business support services, integrating both human resource solutions and technology-driven innovations to help organizations thrive.
+                Amplify Resourcing Limited is a thought leadership management consulting and HR advisory services company that supports large corporations, governments, and international organizations.
               </p>
               <p className=" text-gray-600 leading-relaxed mb-8">
-                We specialize in HR consulting, business optimization, technology solutions, marketing, and automation, ensuring that businesses have the right tools and workforce to achieve sustainable growth.
+                We help organizations capture value through strategic insight, tailored advisory support, and people-centered solutions that strengthen growth and performance.
               </p>
 
             </MotionDiv>
@@ -75,7 +76,7 @@ export default function About() {
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">Our Mission</h3>
                   <p className="text-gray-600">
-                    To empower organizations with tailored HR strategies and technology-driven solutions that drive efficiency, enhance performance, and fuel sustainable growth.
+                    To provide a differentiated approach that helps large corporations, international organizations, and indigenous companies capture value through thought leadership and HR advisory services.
                   </p>
                 </div>
               </div>
@@ -87,7 +88,7 @@ export default function About() {
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">Our Vision</h3>
                   <p className="text-gray-600">
-                    To be the leading partner for businesses seeking to transform their HR operations and achieve exceptional growth through people-centric solutions.
+                    To be the trusted partner for business growth and transformation through strategic thought leadership pathways and HR advisory services.
                   </p>
                 </div>
               </div>

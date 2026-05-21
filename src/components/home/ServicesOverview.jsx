@@ -2,60 +2,52 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { 
-  Users, 
-  UserSearch, 
-  Shield, 
-  GraduationCap, 
-  Heart, 
   ArrowRight,
+  Lightbulb,
+  Users,
+  Award,
   Sparkles
 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import thoughtLeadershipImage from '@/assets/thought-leadership.jpg';
+import hrAdvisoryImage from '@/assets/people-at-meeting.jpg';
+import managementConsultingImage from '@/assets/streategy-meeting-with-people.jpg';
+import technologySolutionsImage from '@/assets/tech-solutions.jpg';
 
 const MotionDiv = motion.div;
 
 const services = [
   {
+    icon: Lightbulb,
+    title: 'Thought Leadership Execution',
+    description: 'We help leaders shape influence, visibility, and market positioning through focused thought leadership support.',
+    image: thoughtLeadershipImage,
+    color: 'from-purple-500 to-purple-600',
+    textColor: 'text-purple-700',
+  },
+  {
     icon: Users,
     title: 'HR Advisory',
-    description: 'Strategic HR guidance to build strong organizational foundations and optimize your people processes.',
-    color: 'from-purple-500 to-purple-600',
-    bgColor: 'bg-purple-50',
-  },
-  {
-    icon: UserSearch,
-    title: 'Talent Acquisition',
-    description: 'Find and attract the right talent with our comprehensive recruitment and selection strategies.',
+    description: 'We provide practical HR guidance that helps organizations build stronger people systems and workplace outcomes.',
+    image: hrAdvisoryImage,
     color: 'from-blue-500 to-blue-600',
-    bgColor: 'bg-blue-50',
+    textColor: 'text-blue-700',
   },
   {
-    icon: Shield,
-    title: 'Compliance & Policy',
-    description: 'Ensure your organization meets all regulatory requirements with robust policies and procedures.',
+    icon: Award,
+    title: 'Management Consulting',
+    description: 'We support organizations with strategic advice that improves structure, execution, and long-term performance.',
+    image: managementConsultingImage,
     color: 'from-emerald-500 to-emerald-600',
-    bgColor: 'bg-emerald-50',
-  },
-  {
-    icon: GraduationCap,
-    title: 'Training & Development',
-    description: 'Upskill your workforce with tailored training programs that drive performance and growth.',
-    color: 'from-orange-500 to-orange-600',
-    bgColor: 'bg-orange-50',
-  },
-  {
-    icon: Heart,
-    title: 'Culture & Retention',
-    description: 'Build a thriving workplace culture that attracts, engages, and retains top talent.',
-    color: 'from-pink-500 to-pink-600',
-    bgColor: 'bg-pink-50',
+    textColor: 'text-emerald-700',
   },
   {
     icon: Sparkles,
     title: 'Technology Solutions',
-    description: 'Harness the power of technology to optimize your HR processes and drive innovation.',
+    description: 'We harness practical technology to streamline operations, improve visibility, and enable smarter decisions.',
+    image: technologySolutionsImage,
     color: 'from-cyan-500 to-cyan-600',
-    bgColor: 'bg-cyan-50',
+    textColor: 'text-cyan-700',
   }
 ];
 
@@ -77,20 +69,20 @@ export default function ServicesOverview() {
           >
             <div className="inline-flex items-center gap-2 bg-purple-100 rounded-full px-4 py-2 mb-6">
               <Sparkles size={16} className="text-purple-600" />
-              <span className="text-purple-700 text-sm font-semibold uppercase tracking-wide">What We Offer</span>
+              <span className="text-purple-700 text-sm font-semibold uppercase tracking-wide">Four Core Services</span>
             </div>
             <h2 className="text-2xl lg:text-4xl font-bold text-gray-900 mb-6">
-              Empowering Businesses with
-              <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-600 to-purple-800"> Smart Solutions</span>
+              Focused support across
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-600 to-purple-800"> the areas that matter most</span>
             </h2>
             <p className="text-gray-600 leading-relaxed">
-              Discover our integrated services designed to support and scale your business efficiently.
+              Explore the four main service areas Amplify uses to help organizations grow, communicate, and perform better.
             </p>
           </MotionDiv>
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4 mb-12">
           {services.map((service, idx) => (
             <MotionDiv
               key={service.title}
@@ -100,27 +92,25 @@ export default function ServicesOverview() {
               transition={{ duration: 0.5, delay: idx * 0.1 }}
               className="group"
             >
-              <div className="h-full bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100 hover:border-purple-200 relative overflow-hidden">
-                {/* Hover Background */}
-                <div className={`absolute inset-0 ${service.bgColor} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
-                
-                <div className="relative">
-                  <div className={`w-14 h-14 rounded-xl bg-linear-to-br ${service.color} flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+              <div className="relative overflow-hidden rounded-xl bg-white shadow-lg ring-1 ring-black/5 transition-all duration-500 group-hover:-translate-y-1 group-hover:shadow-2xl">
+                <div className="relative h-120 overflow-hidden">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/30 to-transparent" />
+                  <div className={`absolute top-5 left-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-linear-to-br ${service.color} shadow-xl`}>
                     <service.icon className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-purple-700 transition-colors">
-                    {service.title}
-                  </h3>
-                  <p className=" text-sm text-gray-600 leading-relaxed mb-6">
-                    {service.description}
-                  </p>
-                  <Link
-                    to={"/services"}
-                    className="inline-flex items-center gap-2 text-purple-600 font-semibold group-hover:gap-3 transition-all"
-                  >
-                    Learn more
-                    <ArrowRight size={16} />
-                  </Link>
+                  <div className="absolute bottom-0 left-0 right-0 p-6 bg-black/50 rounded-t-xl">
+                    <h3 className={`text-2xl font-bold leading-tight text-white mb-2`}>
+                      {service.title}
+                    </h3>
+                    <p className="mb-0 text-sm leading-relaxed text-white/70">
+                      {service.description}
+                    </p>
+                  </div>
                 </div>
               </div>
             </MotionDiv>
@@ -134,7 +124,7 @@ export default function ServicesOverview() {
               size="lg"
               className="bg-linear-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white rounded-full px-10 py-6 font-semibold shadow-xl shadow-purple-500/25 transition-all duration-300 hover:scale-105"
             >
-              View All Services
+              Explore Services
               <ArrowRight className="ml-2" size={20} />
             </Button>
           </Link>
