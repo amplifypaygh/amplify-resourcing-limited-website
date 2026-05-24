@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
-import React, { useEffect, useState } from 'react';
+import { motion, useInView } from "framer-motion";
+import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
@@ -7,6 +7,41 @@ import interviewedByHrVideo from '@/assets/being-interviewed-by-hr.mp4';
 import fibaSeminarVideo from '@/assets/fido-seminar-video.mp4';
 
 const MotionDiv = motion.div;
+
+function AnimatedCount({ value, suffix = '', isActive }) {
+  const [displayValue, setDisplayValue] = useState(0);
+
+  useEffect(() => {
+    if (!isActive) {
+      return undefined;
+    }
+
+    const duration = 3000;
+    const startTime = performance.now();
+    let frameId;
+
+    const animate = (currentTime) => {
+      const progress = Math.min((currentTime - startTime) / duration, 1);
+      const easedProgress = 1 - Math.pow(1 - progress, 3);
+      setDisplayValue(Math.round(value * easedProgress));
+
+      if (progress < 1) {
+        frameId = window.requestAnimationFrame(animate);
+      }
+    };
+
+    frameId = window.requestAnimationFrame(animate);
+
+    return () => window.cancelAnimationFrame(frameId);
+  }, [isActive, value]);
+
+  return (
+    <span>
+      {displayValue}
+      {suffix}
+    </span>
+  );
+}
 
 const heroVideos = [
   {
@@ -21,6 +56,8 @@ const heroVideos = [
 
 export default function HeroSection() {
   const [activeVideoIndex, setActiveVideoIndex] = useState(0);
+  const statsRef = useRef(null);
+  const isStatsInView = useInView(statsRef, { once: true, amount: 0.65 });
 
   useEffect(() => {
     const timer = window.setInterval(() => {
@@ -55,7 +92,7 @@ export default function HeroSection() {
       </div>
 
       <div className="relative max-w-7xl mx-auto lg:mx-24  px-4 sm:px-6 lg:px-8 pt-32 pb-20">
-        <div className="max-w-3xl text-left">
+        <div className="max-w-5xl text-left">
           {/* Content */}
           <MotionDiv
             initial={{ opacity: 0, y: 30 }}
@@ -68,18 +105,17 @@ export default function HeroSection() {
             </div>
 
             <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-white leading-tight mb-6">
-              Business Growth 
+              Empowering Organizations Through
               <br />
-              Through
-              <span className="p-2 text-transparent bg-clip-text bg-linear-to-r from-purple-300 to-pink-300">
-                Strategic Advisory
+              <span className=" text-transparent bg-clip-text bg-linear-to-r from-purple-300 to-pink-300">
+                Strategic Thought Leadership
               </span>
               <br />
-              and People-Centered Solutions
+              and People Transformation
             </h1>
 
             <p className="text-lg text-purple-100/80 leading-relaxed mb-10 max-w-2xl">
-              Amplify Resourcing Limited is a thought leadership management consulting and HR advisory services company supporting organizations that need clarity, structure, and measurable impact.
+              We help organizations unlock growth through strategic thought leadership execution and human capital solutions that create sustainable business value.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-start">
@@ -104,11 +140,11 @@ export default function HeroSection() {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 sm:gap-8 mt-16 pt-8 border-t border-white/10 text-left">
+            <div ref={statsRef} className="grid grid-cols-3 gap-6 sm:gap-8 mt-16 pt-8 border-t border-white/10 text-left">
               {[
-                { number: '200+', label: 'Solutions Delivered' },
-                { number: '50+', label: 'Partnerships Built' },
-                { number: '15+', label: 'Industry Experts' },
+                { value: 99, label: 'Solutions Delivered' },
+                { value: 25, label: 'Partnerships Built' },
+                { value: 15, label: 'Industry Experts' },
               ].map((stat, idx) => (
                 <MotionDiv
                   key={idx}
@@ -116,7 +152,9 @@ export default function HeroSection() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.3 + idx * 0.1 }}
                 >
-                  <div className="text-2xl sm:text-4xl font-bold text-white">{stat.number}</div>
+                  <div className="text-2xl sm:text-4xl font-bold text-white">
+                    <AnimatedCount value={stat.value} suffix="+" isActive={isStatsInView} />
+                  </div>
                   <div className="text-purple-200/70 text-xs sm:text-sm mt-1">{stat.label}</div>
                 </MotionDiv>
               ))}

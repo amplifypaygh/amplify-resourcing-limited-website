@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Check, ArrowRight, Target, Lightbulb, Users } from 'lucide-react';
 import { motion } from 'framer-motion';
-import GroupOfMenStanding from '@/assets/group-of-people-standing.jpg'
+import GroupOfMenStanding from '@/assets/amplify-1.jpg'
 
 const MotionDiv = motion.div;
 
@@ -41,7 +41,7 @@ export default function AboutPreview() {
               <div className="absolute -bottom-8 -right-8 w-full h-full bg-linear-to-br from-primary/10 to-secondary/20 rounded-3xl -z-10"></div>
               
               {/* Floating Stats Card */}
-              <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-6 shadow-xl z-20">
+              {/* <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-6 shadow-xl z-20">
                 <div className="flex items-center gap-4">
                   <div className="w-14 h-14 rounded-full bg-linear-to-br from-primary to-primary-dark flex items-center justify-center">
                     <Users className="w-7 h-7 text-white" />
@@ -51,10 +51,10 @@ export default function AboutPreview() {
                       <div className="text-gray-500">Strategic Partner</div>
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               {/* Second floating card */}
-              <div className="absolute top-8 -right-4 bg-linear-to-br from-primary to-primary-dark text-white rounded-2xl p-4 shadow-xl z-20">
+              {/* <div className="absolute top-8 -right-4 bg-linear-to-br from-primary to-primary-dark text-white rounded-2xl p-4 shadow-xl z-20">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
                     <Target className="w-5 h-5" />
@@ -64,7 +64,7 @@ export default function AboutPreview() {
                     <div className="text-secondary/90 text-sm">HR Advisory</div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </MotionDiv>
 

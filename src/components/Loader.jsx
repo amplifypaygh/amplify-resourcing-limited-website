@@ -19,7 +19,7 @@ export default function Loader() {
           transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
         >
           {/* <BriefcaseBusiness className="h-8 w-8" /> */}
-          <img src="amplify-logo-nobg.png" alt="Amplify Resourcing Limited" />
+          <img src="/amplify-transparent.png" alt="Amplify Resourcing Limited" />
         </MotionDiv>
 
         <div>

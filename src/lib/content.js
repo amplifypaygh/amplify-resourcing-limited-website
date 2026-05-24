@@ -1,18 +1,4 @@
-import { 
-  Target, 
-  Eye, 
-  Users, 
-  Award, 
-  Check, 
-  ArrowRight,
-  Lightbulb,
-  Rocket,
-  Heart,
-  Shield,
-  GraduationCap,
-  UserSearch,
-  Sparkles,
-} from 'lucide-react';
+import { Users, Award, Lightbulb, Rocket, Heart, Shield, Sparkles } from 'lucide-react';
 
 export const AboutCTA = {
     callToActionTitle: "Ready to Partner with Us?",
@@ -34,16 +20,16 @@ export const insightCTA = {
 
 export const AboutHero = {
   title: "Your Partner for Business Growth &",
-  subtitle: "Amplify Resourcing Limited",
+  // subtitle: "Amplify Resourcing Limited",
   description: "Thought leadership and HR advisory for organizations that need clarity, structure, and measurable impact.",
   highlightedText:"Transformation"
 }
 
 export const serviceHero = {
-    title: "Empowering Businesses with",
-    subtitle: "Our Services",
-  description: "Discover our consulting, advisory, and support services designed to strengthen visibility, operations, and growth.",
-  highlightedText:" Strategic Solutions"
+  title: 'Empowering Businesses with',
+  subtitle: 'Our Services',
+  description: 'Choose a service area to see how Amplify supports leaders, people, operations, and technology adoption.',
+  highlightedText: ' Strategic Solutions',
 }
 
 export const ContactHero = {
@@ -167,105 +153,272 @@ export const approach = [
   },
 ];
 
-export const services = [
+export const newServiceContent = [
   {
-    icon: Users,
-    title: 'Thought Leadership Strategy',
-    description: 'We align your company with market opportunities through pre-screened expertise and thought leadership engagement support.',
-    features: [
-      'Thought leadership engagement design',
-      'Market-aligned strategy support',
-      'Expertise sourcing and positioning',
-      'Solution-led company visibility',
-      'Full consulting and management support',
-    ],
+    slug: 'thought-leadership',
+    title: 'Thought Leadership',
+    navLabel: 'Thought Leadership',
+    description: 'We help leaders build authority, shape narratives, and move with clarity across public, internal, and stakeholder-facing spaces.',
+    icon: Lightbulb,
     color: 'from-purple-500 to-purple-600',
     bgColor: 'bg-purple-50',
     borderColor: 'border-purple-200',
+    imageKey: 'thoughtLeadership',
+    heroContent: {
+      title: 'Thought Leadership',
+      subtitle: 'Thought Leadership',
+      highlightedText: ' Services',
+      description:
+        'We help leaders build authority, shape narratives, and move with clarity across public, internal, and stakeholder-facing spaces.',
+    },
+    subservices: [
+        {
+          icon: Lightbulb,
+          "title": "Enterprise Thought Leadership Strategy",
+          "description": "We design and operationalize enterprise-wide thought leadership strategies that position organizations as authoritative voices in their industries, shaping markets, policy direction, and stakeholder perception.",
+          "features": [
+            "Corporate thought leadership framework design",
+            "Industry positioning and narrative development",
+            "Strategic messaging and executive alignment",
+            "Foresight and emerging trends integration",
+            "Content-to-influence strategy development",
+            "Stakeholder perception and impact mapping"
+          ],
+          color: 'from-purple-500 to-purple-600',
+          bgColor: 'bg-purple-50',
+          borderColor: 'border-purple-200',
+        },
+        {
+          icon: Award,
+          "title": "Executive Positioning and Influence Strategy",
+          "description": "We help senior executives and boards build credible influence, strengthen visibility, and establish authoritative leadership voices across key industry and global platforms.",
+          "features": [
+            "CEO/C-suite personal brand strategy",
+            "Executive narrative and storytelling development",
+            "Media and stakeholder engagement positioning",
+            "Strategic visibility and reputation building",
+            "Industry influence mapping and activation",
+            "Executive communication architecture"
+          ],
+          color: 'from-emerald-500 to-emerald-600',
+          bgColor: 'bg-emerald-50',
+          borderColor: 'border-emerald-200',
+        },
+          {
+            icon: Users,
+          "title": "Leadership Platforms and High-Level Engagements",
+          "description": "We design and deliver elite leadership platforms that convene CEOs, CTOs, CIOs, CFOs, CHROs, and policymakers to drive dialogue, collaboration, and strategic industry transformation.",
+          "features": [
+            "Executive leadership summits and conferences",
+            "Government and private sector policy dialogues",
+            "Industry roundtables and CEO networks",
+            "Cross-sector collaboration platforms",
+            "Knowledge-sharing and executive exchange programs",
+            "Strategic stakeholder engagement events"
+          ],
+          color: 'from-blue-500 to-blue-600',
+          bgColor: 'bg-blue-50',
+          borderColor: 'border-blue-200',
+        },
+        {
+          icon: Lightbulb,
+          "title": "Innovation and Future Readiness",
+          "description": "We help organizations anticipate disruption and build future-ready capabilities through innovation strategy, digital transformation, and emerging technology adoption frameworks.",
+          "features": [
+            "AI and digital transformation advisory",
+            "Future of work strategy development",
+            "Innovation capability building",
+            "Emerging technology impact assessments",
+            "Organizational agility frameworks",
+            "Scenario planning and future readiness diagnostics"
+          ],
+          color: 'from-amber-500 to-amber-600',
+          bgColor: 'bg-amber-50',
+          borderColor: 'border-amber-200',
+        }
+      ],
   },
   {
-    icon: UserSearch,
-    title: 'Executive Positioning & Branding',
-    description: 'We build the public voices of senior leaders through speeches, articles, interviews, and media presence.',
-    features: [
-      'Executive voice development',
-      'Speech and article support',
-      'Media and interview positioning',
-      'Authority and influence building',
-      'Brand presence alignment',
-    ],
+    slug: 'hr-advisory',
+    title: 'HR Advisory',
+    navLabel: 'HR Advisory',
+    description: 'We help organizations strengthen the people side of business with actionable guidance on structure, policy, and workforce performance.',
+    icon: Users,
     color: 'from-blue-500 to-blue-600',
     bgColor: 'bg-blue-50',
     borderColor: 'border-blue-200',
-  },
-  {
-    icon: Shield,
-    title: 'Integration with Business Goals',
-    description: 'We connect thought leadership directly to commercial goals such as market lead generation and policy influence.',
-    features: [
-      'Commercial alignment',
-      'Lead generation support',
-      'Policy influence strategy',
-      'Stakeholder messaging',
-      'Business goal integration',
+    imageKey: 'hrAdvisory',
+    heroContent: {
+      title: 'HR Advisory',
+      subtitle: 'People Systems',
+      highlightedText: ' Support',
+      description:
+        'We help organizations strengthen the people side of business with actionable guidance on structure, policy, and workforce performance.', 
+    },
+    subservices: [
+      {
+        icon: Users,
+        "title": "Organisational Design & Development",
+        "description": "We help organizations design effective structures, operating models, and cultures that align strategy with execution and enable sustainable performance and business growth.",
+        "features": [
+          "Organisational structure design and restructuring",
+          "Development of job descriptions, defining roles and clarifying reporting relationships",
+          "Evaluation of roles, job grading and developing of pay structures that reflect the value of the roles",
+          "Design and implementation of Performance Management systems"
+        ],
+        color: 'from-blue-500 to-blue-600',
+        bgColor: 'bg-blue-50',
+        borderColor: 'border-blue-200',
+      },
+      {
+        icon: Users,
+        "title": "Talent Acquisition",
+        "description": "We deliver complete talent acquisition solutions that help organizations attract, assess, and secure top talent aligned with business strategy and culture. Our strategic approach goes beyond recruitment we build talent pipelines, and hiring systems that give you a sustainable competitive advantage in attracting and retaining top talent.",
+        "features": [
+          "Executive search and senior recruitment",
+          "Recruitment, selection and placement of competent talents for all job roles",
+          "Talent pipeline and workforce planning",
+          "Recruitment advisory service"
+        ],
+        color: 'from-green-500 to-green-600',
+        bgColor: 'bg-green-50',
+        borderColor: 'border-green-200',
+      },
+      {
+        icon: Users,
+        "title": "Employment Law Advisory",
+        "description": "We provide practical labour law advisory services that help organizations remain compliant, reduce risk, and effectively manage workforce related legal matters.",
+        "features": [
+          "Employment contract advisory and review for local & expatriate executives",
+          "HR policy and compliance development",
+          "Ghana Labour law compliance guidance",
+          "Termination and redundancy advisory"
+        ],
+        color: 'from-amber-500 to-amber-600',
+        bgColor: 'bg-amber-50',
+        borderColor: 'border-amber-200',
+      },
+      {
+        icon: Users,
+        "title": "Training & Capability Development",
+        "description": "We design and deliver impactful training programs that build leadership capability, enhance employee performance, and strengthen organisational competencies to deliver business value.",
+        "features": [
+          "Expatriate training and culture awareness",
+          "Technical and functional skills training for all levels",
+          "Custom corporate training solutions",
+          "Learning and development strategy design"
+        ],
+        color: 'from-cyan-500 to-cyan-600',
+        bgColor: 'bg-cyan-50',
+        borderColor: 'border-cyan-200',
+      },
+      {
+        icon: Users,
+        "title": "Other HR Advisory Services",
+        "description": "Explore our extended HR advisory services built around what you actually need. We cover the full employee lifecycle and beyond.",
+        "features": [
+          "Permanent and temporary staffing solutions",
+          "Payroll management services",
+          "Contract staffing and outsourcing support",
+          "Pre-employment screening and background checks",
+          "Business set-up and regulatory requirement compliance support for new businesses"
+        ],
+        color: 'from-purple-500 to-purple-600',
+        bgColor: 'bg-purple-50',
+        borderColor: 'border-purple-200',
+      },
     ],
+  },    
+  {
+    slug: 'management-consulting',
+    title: 'Management Consulting',
+    navLabel: 'Management Consulting',
+    description: 'We work with leaders to clarify priorities, improve operating models, and turn strategy into measurable outcomes.',
+    icon: Award,
     color: 'from-emerald-500 to-emerald-600',
     bgColor: 'bg-emerald-50',
     borderColor: 'border-emerald-200',
-  },
-  {
-    icon: GraduationCap,
-    title: 'HR Advisory Service',
-    description: 'We provide strategic and operational guidance to help organizations build, manage, and optimize their workforce.',
-    features: [
-      'Workforce planning support',
-      'Operational HR guidance',
-      'Organization design advice',
-      'People management optimization',
-      'Strategic HR support',
+    imageKey: 'managementConsulting',
+    heroContent: {
+      title: 'Management Consulting',
+      subtitle: 'Business Improvement',
+      highlightedText: ' Services',
+      description:
+        'We work with leaders to clarify priorities, improve operating models, and turn strategy into measurable outcomes.',
+    },
+    subservices: [
+        {
+          title: "Strategy & Business Advisory",
+          description: "Our advisory solution helps organisations develop clear, actionable strategies that drive growth, improve operational performance, and strengthen long-term sustainability. We focus on guiding businesses through strategic planning, market positioning, organisational transformation, and decision making processes while aligning business goals with people, culture, and leadership development.",
+          features: [
+            "Business Growth and Expansion Advisory",
+            "Market Positioning and Competitive Analysis",
+            "Business Process Optimization",
+          "Stakeholder Engagement and Alignment",
+          ]
+        }
     ],
-    color: 'from-orange-500 to-orange-600',
-    bgColor: 'bg-orange-50',
-    borderColor: 'border-orange-200',
   },
   {
-    icon: Heart,
-    title: 'Comprehensive Training Programs',
-    description: 'We provide your team with practical information and applicable skills through training resources and development programs.',
-    features: [
-      'Practical training resources',
-      'Skills development programs',
-      'Team capability building',
-      'Applied learning support',
-      'Development planning',
-    ],
-    color: 'from-pink-500 to-pink-600',
-    bgColor: 'bg-pink-50',
-    borderColor: 'border-pink-200',
-  },
-  {
-    icon: Sparkles,
+    slug: 'technology-solutions',
     title: 'Technology Solutions',
-    description: 'Harness the power of technology to optimize your HR processes and drive innovation.',
-    features: [
-      'Custom HR software implementation',
-      'Automated and AI-powered Solutions',
-      'Performance management systems',
-      'Employee self-service portals',
-      'Data analytics and reporting',
-    ],
+    navLabel: 'Technology Solutions',
+    description: 'We use practical technology to streamline workflows, improve access to information, and support smarter decisions.',
+    icon: Sparkles,
     color: 'from-cyan-500 to-cyan-600',
     bgColor: 'bg-cyan-50',
     borderColor: 'border-cyan-200',
+    imageKey: 'technologySolutions',
+    heroContent: {
+      title: 'Technology Solutions',
+      subtitle: 'Digital Enablement',
+      highlightedText: ' Services',
+      description:
+        'We use practical technology to streamline workflows, improve access to information, and support smarter decisions.',
+    },
+    subservices: [
+        {
+          icon: Sparkles,
+          title: "Custom Software Development",
+          description: "We design and build custom software solutions tailored to your organisation's unique needs, ensuring seamless integration with existing systems and processes.",
+          features: [
+            "Requirements Analysis and Design",
+            "Agile Development Methodology",
+            "Quality Assurance and Testing",
+            "Deployment and Maintenance"
+          ],
+          color: 'from-cyan-500 to-cyan-600',
+          bgColor: 'bg-cyan-50',
+          borderColor: 'border-cyan-200',
+        },
+        {
+            icon: Sparkles,
+          title: "Automation and Workflow Optimization",
+          description: "We help organisations automate repetitive tasks and optimise their workflows to increase efficiency, reduce costs, and improve overall performance.",
+          features: [
+            "Process Automation",
+            "Workflow Design and Implementation",
+            "Integration with Existing Systems",
+            "Performance Monitoring and Reporting"
+          ],
+          color: 'from-emerald-500 to-emerald-600',
+          bgColor: 'bg-emerald-50',
+          borderColor: 'border-emerald-200',
+        },
+        {
+          icon: Sparkles,
+          title: "Social Media Management and Digital Marketing Solutions",
+          description: "We provide data analytics and business intelligence solutions that help organisations make informed decisions, identify trends, and gain insights from their data.",
+          features: [
+            "Social Media Strategy Development",
+            "Content Creation and Management",
+            "Paid Social Media Advertising",
+            "Analytics and Performance Reporting"
+          ],
+          color: 'from-purple-500 to-purple-600',
+          bgColor: 'bg-purple-50',
+          borderColor: 'border-purple-200',
+        }
+    ],
   }
-];
-
-const ContactServices = [
-  'HR Advisory',
-  'Talent Acquisition',
-  'Compliance & Policy',
-  'Training & Development',
-  'Culture & Retention',
-  'Technology Solutions',
-  'General Inquiry',
 ];

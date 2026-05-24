@@ -15,6 +15,7 @@ export default function Router() {
             <Route path="/" element={<Pages.Home />} />
             <Route path="/about" element={<Pages.About />} />
             <Route path="/services" element={<Pages.Service />} />
+          <Route path="/services/:serviceSlug" element={<Pages.Service />} />
             <Route path="/insights" element={<Pages.Insight />} />
             <Route path="/contact" element={<Pages.Contact />} />
             <Route path="*" element={<Pages.NotFound />} />

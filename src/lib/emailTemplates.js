@@ -1,29 +1,19 @@
 
 export const emailTemplates = {
+  'Thought Leadership': {
+    subject: 'Thought Leadership Inquiry',
+    intro: 'I would like support with leadership positioning, visibility, communication, or influence building.',
+    nextStep: 'Please reply with your availability for an initial discovery call.',
+  },
   'HR Advisory': {
     subject: 'HR Advisory Inquiry',
     intro: 'I would like support with HR strategy, policy, organizational structure, or process improvement.',
     nextStep: 'Please reply with your availability for an initial discovery call.',
   },
-  'Talent Acquisition': {
-    subject: 'Talent Acquisition Inquiry',
-    intro: 'I need help attracting, screening, and hiring the right talent for my team.',
-    nextStep: 'Please share how you approach sourcing, assessment, and onboarding support.',
-  },
-  'Compliance & Policy': {
-    subject: 'Compliance & Policy Inquiry',
-    intro: 'I need help reviewing HR policies, compliance requirements, or workplace procedures.',
-    nextStep: 'Please advise on the best next steps for a compliance review or policy audit.',
-  },
-  'Training & Development': {
-    subject: 'Training & Development Inquiry',
-    intro: 'I am looking for training or development support for our team.',
-    nextStep: 'Please share the types of training programs you can design or deliver.',
-  },
-  'Culture & Retention': {
-    subject: 'Culture & Retention Inquiry',
-    intro: 'I want to improve employee engagement, retention, and workplace culture.',
-    nextStep: 'Please send options for employee engagement or retention support.',
+  'Management Consulting': {
+    subject: 'Management Consulting Inquiry',
+    intro: 'I would like support with strategy execution, operating model review, or performance improvement.',
+    nextStep: 'Please share how you approach consulting engagements and transformation support.',
   },
   'Technology Solutions': {
     subject: 'Technology Solutions Inquiry',

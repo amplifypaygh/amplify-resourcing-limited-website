@@ -11,7 +11,7 @@ import { motion } from 'framer-motion';
 import CTASection from '@/components/others/CTASection';
 import HeroSection from '@/components/others/HeroSection';
 import { AboutCTA, AboutHero, values, approach } from '@/lib/content';
-import WhoWeAreImage from '@/assets/who-we-are.jpg';
+import WhoWeAreImage from '@/assets/amplify-2.jpeg';
 
 const MotionDiv = motion.div;
 

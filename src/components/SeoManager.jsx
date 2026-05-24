@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { newServiceContent as services } from '@/lib/content';
 
 const SITE_NAME = 'Amplify Resourcing Limited';
 const SITE_URL = 'https://amplifyresourcinglimited.vercel.app';
@@ -62,10 +63,18 @@ export default function SeoManager() {
 
   useEffect(() => {
     const currentPath = location.pathname;
-    const pageSeo = routeSeo[currentPath] || {
-      title: `${SITE_NAME} | Page`,
-      description: DEFAULT_DESCRIPTION,
-    };
+    const serviceSlugMatch = currentPath.match(/^\/services\/([^/]+)$/);
+    const serviceSeo = serviceSlugMatch ? services.find((service) => service.slug === serviceSlugMatch[1]) : null;
+
+    const pageSeo = serviceSeo
+      ? {
+          title: `${serviceSeo.title} | ${SITE_NAME}`,
+          description: serviceSeo.description,
+        }
+      : routeSeo[currentPath] || {
+          title: `${SITE_NAME} | Page`,
+          description: DEFAULT_DESCRIPTION,
+        };
 
     const canonicalUrl = `${SITE_URL}${currentPath === '/' ? '' : currentPath}`;
 
