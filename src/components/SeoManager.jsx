@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import { newServiceContent as services } from '@/lib/content';
 
 const SITE_NAME = 'Amplify Resourcing Limited';
-const SITE_URL = 'https://amplifyresourcinglimited.vercel.app';
+const SITE_URL = 'https://amplifyresourcing.com';
 const DEFAULT_DESCRIPTION =
   'Thought leadership, HR advisory, management consulting and practical technology solutions that help organisations scale, improve performance, and build people-centred cultures.';
 const DEFAULT_IMAGE = `${SITE_URL}/amplify-logo-bg.jpg`;
@@ -58,6 +58,17 @@ function upsertLink(selector, attributes) {
   });
 }
 
+function upsertScript(id, json) {
+  let element = document.getElementById(id);
+  if (!element) {
+    element = document.createElement('script');
+    element.type = 'application/ld+json';
+    element.id = id;
+    document.head.appendChild(element);
+  }
+  element.text = JSON.stringify(json);
+}
+
 export default function SeoManager() {
   const location = useLocation();
 
@@ -85,6 +96,24 @@ export default function SeoManager() {
       content: pageSeo.description,
     });
 
+    // Core SEO
+    upsertMeta('meta[name="keywords"]', {
+      name: 'keywords',
+      content: [
+        'HR advisory',
+        'thought leadership',
+        'management consulting',
+        'talent acquisition',
+        'training and development',
+        'technology solutions',
+      ].join(', '),
+    });
+
+    upsertMeta('meta[name="robots"]', {
+      name: 'robots',
+      content: 'index, follow',
+    });
+
     upsertMeta('meta[property="og:title"]', {
       property: 'og:title',
       content: pageSeo.title,
@@ -93,6 +122,16 @@ export default function SeoManager() {
     upsertMeta('meta[property="og:description"]', {
       property: 'og:description',
       content: pageSeo.description,
+    });
+
+    upsertMeta('meta[property="og:site_name"]', {
+      property: 'og:site_name',
+      content: SITE_NAME,
+    });
+
+    upsertMeta('meta[property="og:locale"]', {
+      property: 'og:locale',
+      content: 'en_US',
     });
 
     upsertMeta('meta[property="og:type"]', {
@@ -129,6 +168,46 @@ export default function SeoManager() {
       name: 'twitter:image',
       content: DEFAULT_IMAGE,
     });
+
+    // Structured data (JSON-LD)
+    const orgSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: SITE_NAME,
+      url: SITE_URL,
+      logo: DEFAULT_IMAGE,
+    };
+
+    const websiteSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: SITE_NAME,
+      url: SITE_URL,
+      description: DEFAULT_DESCRIPTION,
+    };
+
+    upsertScript('ld-org', orgSchema);
+    upsertScript('ld-website', websiteSchema);
+
+    if (serviceSeo) {
+      const serviceSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        name: serviceSeo.title,
+        description: serviceSeo.description,
+        url: canonicalUrl,
+        provider: {
+          '@type': 'Organization',
+          name: SITE_NAME,
+          url: SITE_URL,
+        },
+      };
+      upsertScript('ld-service', serviceSchema);
+    } else {
+      // remove service script if present
+      const existing = document.getElementById('ld-service');
+      if (existing) existing.remove();
+    }
 
     upsertLink('link[rel="canonical"]', {
       rel: 'canonical',
