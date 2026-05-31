@@ -99,7 +99,7 @@ export default function About() {
       </section>
 
       {/* Our Values */}
-      <section className="py-24 bg-linear-to-b from-gray-50 to-white">
+      <section className="py-24 bg-linear-to-r from-violet-200 to-purple-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <motion.div

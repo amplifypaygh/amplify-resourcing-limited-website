@@ -142,7 +142,7 @@ export default function Contact() {
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">
                   Contact Information
                 </h2>
-                <p className=" text-gray-600 leading-relaxed">
+                <p className=" text-gray-600 text-sm leading-relaxed">
                   Have a question or want to work with us? We'd love to hear from you. Here's how you can reach us.
                 </p>
               </div>
@@ -157,7 +157,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900">Email Us</h3>
-                    <p className="text-purple-600">{recipientEmail}</p>
+                    <p className="text-purple-600 text-sm">{recipientEmail}</p>
                   </div>
                 </a>
 
@@ -170,7 +170,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900">Call Us</h3>
-                    <p className="text-blue-600">+233556047336</p>
+                    <p className="text-blue-600 text-sm">+233556047336</p>
                   </div>
                 </a>
 
@@ -185,7 +185,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900">WhatsApp</h3>
-                    <p className="text-green-600">Chat with us instantly</p>
+                    <p className="text-green-600 text-sm">Click to Chat with us instantly</p>
                   </div>
                 </a>
 
@@ -195,7 +195,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900">Location</h3>
-                    <p className="text-gray-600">No. 9 Nii Sai Road, East Legon, Accra</p>
+                    <p className="text-gray-600 text-sm">No. 9 Nii Sai Road, East Legon, Accra</p>
                   </div>
                 </div>
 
@@ -205,7 +205,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900">Business Hours</h3>
-                    <p className="text-gray-600">Mon - Fri: 8:00 AM - 5:00 PM</p>
+                    <p className="text-gray-600 text-sm">Mon - Fri: 8:00 AM - 5:00 PM</p>
                   </div>
                 </div>
               </div>
@@ -253,7 +253,7 @@ export default function Contact() {
                     <h3 className="text-2xl font-bold text-gray-900 mb-4">
                       Thank You!
                     </h3>
-                    <p className=" text-gray-600 mb-8">
+                    <p className=" text-gray-600 mb-8 text-sm">
                       Your message was sent successfully. We will get back to you within 24 hours.
                     </p>
                     <Button
@@ -268,7 +268,7 @@ export default function Contact() {
                     <h2 className="text-2xl font-bold text-gray-900 mb-2">
                       Send Us a Message
                     </h2>
-                    <p className="text-gray-600 mb-8">
+                    <p className="text-gray-600 mb-8 text-sm leading-relaxed">
                       Fill out the form below and we'll get back to you as soon as possible.
                     </p>
 

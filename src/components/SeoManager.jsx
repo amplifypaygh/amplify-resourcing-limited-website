@@ -5,34 +5,34 @@ import { newServiceContent as services } from '@/lib/content';
 const SITE_NAME = 'Amplify Resourcing Limited';
 const SITE_URL = 'https://amplifyresourcinglimited.vercel.app';
 const DEFAULT_DESCRIPTION =
-  'Amplify Resourcing Limited provides HR advisory, talent acquisition, compliance, training, and technology solutions for growth-focused businesses.';
+  'Thought leadership, HR advisory, management consulting and practical technology solutions that help organisations scale, improve performance, and build people-centred cultures.';
 const DEFAULT_IMAGE = `${SITE_URL}/amplify-logo-bg.jpg`;
 
 const routeSeo = {
   '/': {
-    title: `${SITE_NAME} | HR And Business Growth Solutions`,
+    title: `${SITE_NAME} | Thought Leadership, HR & Technology Solutions`,
     description:
-      'Human-centric HR solutions for growth-focused businesses. We help organizations with recruitment, compliance, culture, and operational excellence.',
+      'We partner with leaders to build authority, strengthen people systems, improve operating models, and deploy practical technology that drives measurable business growth.',
   },
   '/about': {
     title: `About Us | ${SITE_NAME}`,
     description:
-      'Learn about Amplify Resourcing Limited, our mission, values, and people-first approach to helping businesses scale sustainably.',
+      'Discover our mission, values and people-first approach to helping organisations scale through strategic HR advisory, consulting and technology enablement.',
   },
   '/services': {
     title: `Services | ${SITE_NAME}`,
     description:
-      'Explore our services: HR advisory, talent acquisition, compliance and policy, training and development, culture and retention, and technology solutions.',
+      'Explore our services: Thought Leadership, HR Advisory, Management Consulting, and Technology Solutions—designed to clarify strategy, improve performance, and strengthen culture.',
   },
   '/insights': {
     title: `Insights | ${SITE_NAME}`,
     description:
-      'Read practical HR and business growth insights, trends, and resources from Amplify Resourcing Limited.',
+      'Read practical HR, leadership and business insights on talent, culture, compliance and the future of work from our team of practitioners.',
   },
   '/contact': {
     title: `Contact Us | ${SITE_NAME}`,
     description:
-      'Get in touch with Amplify Resourcing Limited to discuss your HR and business support needs.',
+      'Get in touch to discuss tailored HR, consulting or technology solutions that meet your organisation’s needs and growth ambitions.',
   },
 };
 
