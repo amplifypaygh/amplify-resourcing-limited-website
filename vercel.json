@@ -1,4 +1,28 @@
 {
+  "redirects": [
+    {
+      "source": "/:path*",
+      "destination": "https://amplifyresourcing.com/:path*",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.amplifyresourcing.com"
+        }
+      ]
+    },
+    {
+      "source": "/:path*",
+      "destination": "https://amplifyresourcing.com/:path*",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "amplifyresourcinglimited.com"
+        }
+      ]
+    }
+  ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/" }
   ]
